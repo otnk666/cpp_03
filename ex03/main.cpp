@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skomatsu <skomatsu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 19:48:45 by skomatsu          #+#    #+#             */
+/*   Updated: 2026/01/07 19:48:58 by skomatsu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "DiamondTrap.hpp"
@@ -9,13 +21,13 @@ int main(void) {
 
   std::cout << "\n=== Test 2: Attribute Values ===" << std::endl;
   std::cout << "Testing attack (AD should be 30 from FragTrap):" << std::endl;
-  diamond.attack("Villain");  // ScavTrapのattack、30ダメージ
+  diamond.attack("Villain"); 
 
   std::cout << "\nTesting initial energy (should be 50 from ScavTrap):"
             << std::endl;
   for (int i = 0; i < 52; i++) {
     std::cout << "[" << i << "] ";
-    diamond.attack("Target");  // 先に一回攻撃しているので、49回でエネルギー切れ
+    diamond.attack("Target");
   }
 
   std::cout << "\n=== Test 3: Special Abilities ===" << std::endl;
